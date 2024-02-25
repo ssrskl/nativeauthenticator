@@ -49,13 +49,13 @@
 <div id="login-main" class="container">
     <form action="{{post_url}}" method="post" role="form">
         <div class="auth-form-header">
-            Sign Up
+            注册
         </div>
         <div class='auth-form-body'>
-            <p id='insecure-login-warning' class='hidden'>
+            <!-- <p id='insecure-login-warning' class='hidden'>
                 Warning: JupyterHub seems to be served over an unsecured HTTP connection.
                 We strongly recommend enabling HTTPS for JupyterHub.
-            </p>
+            </p> -->
 
             {% if alert %}
             <div class="alert {{alert}}" role="alert">
@@ -72,17 +72,17 @@
             </div>
             {% endif %}
             <input type="hidden" name="_xsrf" value="{{ xsrf }}"/>
-            <label for="username_input">Username:</label>
+            <label for="username_input">用户名:</label>
             <input id="username_input" type="text" name="username" val="{{username}}" autocapitalize="off" autocorrect="off" class="form-control" autofocus="autofocus" required />
             <p></p>
 
             {% if ask_email %}
-            <label for="email_input">Email:</label>
+            <label for="email_input">邮箱:</label>
             <input id="email_input" type="email" name="email" val="{{email}}" class="form-control" required />
             <p></p>
             {% endif %}
 
-            <label for="password_input">Password:</label>
+            <label for="password_input">密码:</label>
             <div class="input-group">
                 <input id="password_input" type="password" name="signup_password" val="" autocapitalize="off" autocorrect="off" class="form-control" />
                 <span class="input-group-addon">
@@ -91,7 +91,7 @@
             </div>
             <p></p>
             
-            <label for="password_confirm">Confirm password:</label>
+            <label for="password_confirm">确认密码:</label>
             <div class="input-group">
                 <input id="password_confirmation_input" type="password" name="signup_password_confirmation" val="" autocapitalize="off" autocorrect="off" class="form-control" />
             </div>
@@ -116,12 +116,12 @@
             <p></p>
             {% endif %}
 
-            <input type="submit" id="signup_submit" class='btn btn-jupyter' value='Create User' {% if tos %}disabled{% endif %} />
+            <input type="submit" id="signup_submit" class='btn btn-jupyter' value='创建账户' {% if tos %}disabled{% endif %} />
             <p></p>
 
             <hr />
             <p>
-                <a href="{{ base_url }}login">Login</a> with an existing user.
+                <a href="{{ base_url }}login">登录</a> 原有的账户.
             </p>
         </div>
     </form>

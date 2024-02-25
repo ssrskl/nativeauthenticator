@@ -34,14 +34,14 @@
 <div id="login-main" class="container">
     <form action="{{login_url}}?next={{next}}" method="post" role="form">
         <div class="auth-form-header">
-            Sign In
+            登录
         </div>
 
         <div class='auth-form-body'>
-            <p id='insecure-login-warning' class='hidden'>
+            <!-- <p id='insecure-login-warning' class='hidden'>
                 Warning: JupyterHub seems to be served over an unsecured HTTP connection.
                 We strongly recommend enabling HTTPS for JupyterHub.
-            </p>
+            </p> -->
 
             {% if login_error %}
             <p class="login_error">
@@ -49,11 +49,11 @@
             </p>
             {% endif %}
             <input type="hidden" name="_xsrf" value="{{ xsrf }}"/>
-            <label for="username_input">Username:</label>
+            <label for="username_input">用户名:</label>
             <input id="username_input" type="text" name="username" val="{{username}}" autocapitalize="off" autocorrect="off" class="form-control" autofocus="autofocus" required />
             <p></p>
 
-            <label for='password_input'>Password:</label>
+            <label for='password_input'>密码:</label>
             <div class="input-group">
                 <input id="password_input" type="password" name="password" val="" autocapitalize="off" autocorrect="off" class="form-control" />
                 <span class="input-group-addon">
@@ -68,13 +68,13 @@
             <p></p>
             {% endif %}
 
-            <input type="submit" id="login_submit" class='btn btn-jupyter' value='Sign In' />
+            <input type="submit" id="login_submit" class='btn btn-jupyter' value='登录' />
             <p></p>
 
             {% if enable_signup %}
             <hr />
             <p>
-                <a href="{{ base_url }}signup"> Sign up</a> to create a new user.
+                <a href="{{ base_url }}signup"> 注册</a> 创建一个新账户.
             </p>
             {% endif %}
         </div>
